@@ -1,2 +1,12 @@
 Vue.js is a framework i.e. it has short codes, boiler plate code that makes coding the frontend easy. Vue helps in making websites reactive and interactive.
 For example: In Javascript you have write a longer code to click a button that increments count and diplays it but Vue gives inbuilt code that can make the code smaller in return making it easier to manage and easier to read.
+
+Vue is declarative and reactive.
+Declarative because you tell what the UI should look like and don't have to worry about updating the DOM separately.
+It is done by declaring by using {{ }}.
+For example: <p> {{ message }} </p>
+Using this, you can what you want on the UI to be seen.
+
+Reactive because whenever you change the value of the declared component it automatically gets updated. In javascript, code needs to be written to update DOM.
+Taking the previous example: When you update message, it will automatically get updated on the UI.
+
