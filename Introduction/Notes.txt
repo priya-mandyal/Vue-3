@@ -1,1 +1,2 @@
-Introduction
+Vue.js is a framework i.e. it has short codes, boiler plate code that makes coding the frontend easy. Vue helps in making websites reactive and interactive.
+For example: In Javascript you have write a longer code to click a button that increments count and diplays it but Vue gives inbuilt code that can make the code smaller in return making it easier to manage and easier to read.
