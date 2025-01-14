@@ -1,24 +1,37 @@
-Vue.js is a framework i.e. it has short codes, boiler plate code that makes coding the frontend easy. Vue helps in making websites reactive and interactive.
-For example: In Javascript you have write a longer code to click a button that increments count and diplays it but Vue gives inbuilt code that can make the code smaller in return making it easier to manage and easier to read.
+# Vue.js Overview
 
-Vue is declarative and reactive.
-Declarative because you tell what the UI should look like and don't have to worry about updating the DOM separately.
-It is done by declaring by using {{ }}.
-For example: <p> {{ message }} </p>
-Using this, you can what you want on the UI to be seen.
+## What is Vue.js?
 
-Reactive because whenever you change the value of the declared component it automatically gets updated. In javascript, code needs to be written to update DOM.
-Taking the previous example: When you update message, it will automatically get updated on the UI.
+Vue.js is a frontend framework that simplifies the development of interactive and reactive websites. It reduces the amount of boilerplate code needed to build dynamic applications and makes the code more manageable and easier to read.
 
-Watch option: It helps respond to changes in the watched properties. If the watched property it changed, you can log it, perform operations etc.
+For example, in JavaScript, you would need to write longer code to create a button that increments a counter and displays it. However, Vue.js provides built-in functionality to make this task more concise.
+
+### Vue.js is Declarative and Reactive
+
+- **Declarative**: In Vue.js, you tell the framework **what** the UI should look like, and Vue takes care of updating the DOM for you. 
+  - Example: `<p> {{ message }} </p>`. 
+    You simply declare `{{ message }}`, and Vue will render the value of `message` in the UI. You don't need to worry about manually manipulating the DOM.
+
+- **Reactive**: Vue.js automatically updates the DOM when the value of a declared property changes. 
+  - In traditional JavaScript, you need to write code to update the DOM manually. 
+  - With Vue, once you change the value of a variable like `message`, it automatically updates the UI.
+  
+### Watch Option in Vue.js
+
+Vue.js provides the `watch` option, which allows you to **respond to changes in specific data properties**. It is particularly useful when you need to perform some action or side effect when the value of a watched property changes.
+
+#### Example:
+
+```js
 watch: {
-  name(oldValue, newValue){ // name is the watched propert {{name}}
-      //code
+  name(oldValue, newValue) { // 'name' is the watched property
+    // Code to perform when 'name' changes
   }
 }
 
-VS Code shortcuts
-CMD + P -> open a file
-CMD + Shift + P -> run a command
-CMD + B -> to hide left panel
-Ctrl + ` -> Open terminal
+### VS Code Shortcuts
+
+- CMD + P: Open a file.
+- CMD + Shift + P: Run a command.
+- CMD + B: Hide the left panel.
+- Ctrl + `: Open terminal.
