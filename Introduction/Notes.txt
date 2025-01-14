@@ -10,3 +10,9 @@ Using this, you can what you want on the UI to be seen.
 Reactive because whenever you change the value of the declared component it automatically gets updated. In javascript, code needs to be written to update DOM.
 Taking the previous example: When you update message, it will automatically get updated on the UI.
 
+Watch option: It helps respond to changes in the watched properties. If the watched property it changed, you can log it, perform operations etc.
+watch: {
+  name(oldValue, newValue){ // name is the watched propert {{name}}
+      //code
+  }
+}
