@@ -16,3 +16,9 @@ watch: {
       //code
   }
 }
+
+VS Code shortcuts
+CMD + P -> open a file
+CMD + Shift + P -> run a command
+CMD + B -> to hide left panel
+Ctrl + ` -> Open terminal
