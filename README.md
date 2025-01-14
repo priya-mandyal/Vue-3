@@ -8,7 +8,12 @@ Feel free to explore, learn, and contribute! 😊
 
 # Learning Vue.js Journey 🚀  
 
-## Topic 1: Introduction to Vue.js  
-### Project Done : NA
-### Notes : [Introduction](Introduction/Notes.md).
-### Subtopics Covered : Declarative, Reactivity, Watch 
+### Topic 1: Introduction to Vue.js  
+*Project Done :* NA
+*Notes :* [Introduction](Introduction/Notes.md)
+*Subtopics Covered :* Declarative, Reactivity, Watch 
+
+### Topic 2: 
+*Project Done :* 
+*Notes :* 
+*Subtopics Covered :* 
