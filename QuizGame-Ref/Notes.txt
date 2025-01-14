@@ -34,5 +34,5 @@ Starter code explained:
 Conditional CSS: We can add conditional CSS class using :class="". Class binding can be done in various ways binding with ojects, arrays, components. In this we are considering objects and for this we need to put objects as key:value pair.
 Key being the CSS class and Value being the value/condition.
 
-Form input binding: It can be done using v-modifier. v-modifier = reactive-element-name so when ever you make a change in the input it is detected by Vue.
+Form input binding: It can be done using v-model. v-model = reactive-element-name so when ever you make a change in the input it is detected by Vue.
 
