@@ -28,7 +28,7 @@ watch: {
     // Code to perform when 'name' changes
   }
 }
-
+```
 ### VS Code Shortcuts
 
 - CMD + P: Open a file.
