@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue 3.4 Template</title>
+  <link rel="stylesheet" href="https://unpkg.com/normalize.css/normalize.css">
+  <style type="text/css">
+    body {
+      font-family: monospace;
+      padding: 20px;
+      font-size: 2em;
+    }
+    .can{
+    color: green;
+     }
+    .can-not{
+      color: red;
+    }
+  </style>
+  
+  <script src="https://unpkg.com/vue@3.4.0"></script> 
+  
+</head>
+
+<body>
+  <div id="app">
+    <div>
+        <!-- For ref, we don't have to say message.value here because Vue automatically detects it as ref and reads message.value -->
+      <div>{{message}}</div>
+      <label>Enter your age:</label>
+      <input v-model="age" placeholder=" Your age"/>
+      <div>Can you drive: <span :class="{can: canDrive === 'Yes', 'can-not': canDrive === 'No'}">{{canDrive}}</span></div>
+    </div>
+  </div>
+  <script>
+    const { createApp, ref, computed } = Vue;
+    let message = ref("Hello")
+    let age = ref(9); 
+    var canDrive = computed(
+        () => {
+            console.log("Computed");
+            return age.value >= 18 ? "Yes" : "No";
+        }
+  );
+
+    setTimeout(
+        () => {
+            console.log("Changed")
+            message.value = "Bye!"
+            age.value = 26;
+        },
+        5000
+    );
+
+    const App = {
+      setup() {
+        return {
+            message,
+            canDrive,
+            age
+        }
+      },
+    };
+    // creates app, mount tells view to find element with id "app"
+    createApp(App).mount('#app');
+  </script>
+</body>
+
+</html>
