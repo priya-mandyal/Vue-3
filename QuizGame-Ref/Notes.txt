@@ -1,1 +1,32 @@
-Ref is used to reactivity in Vue.
+Ref: Ref is used to reactivity in Vue.
+Code example:
+let message = ref("hi");
+// to change, use .value
+message.value = "Bye";
+This change will be automatcally updated on the UI.
+
+Computed(): It helps recalculate logic when its dependencies changes.
+Code example:
+let age = ref(null);
+let canDrive = computed (
+  () => {
+    age >= 18 ? "Yes" :"No"
+}
+)
+// WHenever age value changes canDrive will be recalculated.
+
+
+Starter code explained: 
+// get createApp an dref from Vue
+    const { createApp, ref } = Vue;
+    // App is something you need to have to start with Vue
+    const App = {
+        // setup is where your code/logic goes
+      setup() {
+        // all the methods you want to trigger or values you want to show needs to be returned here
+        return {
+            message: "Hello"
+        }
+        
+      },
+    };
