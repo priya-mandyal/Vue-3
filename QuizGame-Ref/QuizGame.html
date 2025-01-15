@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vue 3.4 Template</title>
+  <title>Excersise 1</title>
   <link rel="stylesheet" href="https://unpkg.com/normalize.css/normalize.css">
   <style type="text/css">
     body {
@@ -12,25 +12,77 @@
       padding: 20px;
       font-size: 2em;
     }
+
+    .can {
+      color: green;
+    }
+
+    .cant {
+      color: red;
+    }
   </style>
-  <!-- <script src="https://unpkg.com/vue@3.4.0"></script> -->
+  <script src="https://unpkg.com/vue@3.4.0"></script>
 </head>
 
 <body>
   <div id="app">
     <div>
-      {{message}}
+      {{areWeDone ? 'Your score is ' + score : 'Answer the following questions'}}
+    </div>
+    <div>
+      {{question}}
+    </div>
+    <div>
+      <input v-model="answer" placeholder="Enter your answer">
+      <button @click="check"> Submit</button>
     </div>
   </div>
   <script>
-    // const { createApp, ref } = Vue;
-    // const App = {
-    //   setup() {
-        
-    //   },
-    // };
+    const { createApp, ref, computed } = Vue;
+    const App = {
+      setup() {
+        const questions = [
+          'How much is 2+2',
+          'How much is 3*5+1',
+          'What is the rest from 3/1'
+        ];
+        const answers = [
+          '4',
+          '16',
+          '1'
+        ];
+        const score = ref(0);
+        const current = ref(0);
+        const answer = ref(0);
+        const question = computed(
+          () => questions[current.value]
+         );
+        const rightAnswer = computed(
+          () => answers[current.value]
+        );
+        const areWeDone = computed(
+          () => {
+            return current.value === questions.length ? true : false;
+          }
+        );
+        const check = () => {
+          if (rightAnswer.value === answer.value) {
+            score.value++;
+          }
+          answer.value = null;
+          current.value++;
+        }
 
-    // createApp(App).mount('#app');
+        return {
+          score,
+          question,
+          answer,
+          areWeDone,
+          check
+        }
+      },
+    };
+    createApp(App).mount('#app');
   </script>
 </body>
 
