@@ -1,6 +1,0 @@
-Lifecycle hooks: Lifecycle hooks are special functions in Vue, rhey help us run code at particular lifecycle events like create, update, destroy, mount etc.
-One of the example is mounted() lifecycle hook: It is run when the componnet is fully created and added to the screen (DOM).
-
-Template refs: It is a way of getting the dom function and access/manipulate it using ref inside ypur template.
-
-watchEffect is a Vue 3 function that automatically tracks reactive dependencies and runs whenever they change.
